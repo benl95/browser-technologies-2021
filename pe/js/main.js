@@ -1,25 +1,17 @@
 if ('querySelector' in document) {
 	// enhance the application
-}
-if (
-	'querySelector' in document &&
-	'localStorage' in window &&
-	'addEventListener' in window
-) {
-	// bootstrap the javascript application
-}
+	let cont = document.querySelector('.pies');
+	let img = document.createElement('img');
+	img.src = '/pe/img/candles-transparent.png';
+	img.style.height = '290px';
+	img.style.width = '295px';
 
-var supportsOpacity = typeof document.body.style.opacity === 'string';
-if (supportsOpacity) {
-	// enhance the component
+	cont.appendChild(img);
 }
 
-// var font = new FontFaceObserver('My Family', {
-//     weight: 400
-//   });
+// Example of checking if opacity exists in the current browser
 
-// font.load().then(function () {
-//     console.log('Font is available');
-// }, function () {
-//     console.log('Font is not available');
-// });
+// var supportsOpacity = typeof document.body.style.opacity === 'string';
+// if (supportsOpacity) {
+// 	// enhance the component
+// }
