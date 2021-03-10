@@ -3,8 +3,6 @@ if ('querySelector' in document) {
 	let cont = document.querySelector('.pies');
 	let img = document.createElement('img');
 	img.src = '/pe/img/candles-transparent.png';
-	img.style.height = '290px';
-	img.style.width = '295px';
 
 	cont.appendChild(img);
 }
