@@ -4,16 +4,22 @@ html {
 	margin: 0;
 	box-sizing: border-box;
 }
-
+body {
+	background-color: #afe2cf;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 h3 {
 	font-size: 1.5em;
 	font-size: clamp(1rem, 4vw, 1.5rem);
 }
 header,
 main {
-	padding: 0 20%;
+	margin: 0 auto;
 	font-family: sans-serif;
-	background-color: #afe2cf;
+	max-width: 40em;
 }
 
 .enhanced-font body {
@@ -32,6 +38,7 @@ header h1 {
 
 .container p {
 	min-width: 20em;
+
 	font-size: 1em;
 	font-size: clamp(0.5rem, 3vw, 1rem);
 }
@@ -66,14 +73,14 @@ article {
 }
 
 .pies img {
-	width: 290px;
-	height: 295px;
+	width: 250px;
+	height: 255px;
 	position: center;
 }
 
 .pies div {
-	width: 290px;
-	height: 295px;
+	width: 250px;
+	height: 255px;
 	background-image: url('../img/icing-transparent.png');
 	background-position: center;
 	background-size: cover;
@@ -93,6 +100,7 @@ li pre code {
 }
 
 footer {
+	width: 100%;
 	display: flex;
 	padding: 50px 0;
 	background-color: rgb(46, 46, 46);
@@ -101,6 +109,9 @@ footer {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	background-image: url('../img/cat.jpeg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 footer h3 {
