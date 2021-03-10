@@ -109,7 +109,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	background-image: url('../img/cat.jpeg');
+	background: url('../img/cat.jpeg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
