@@ -6,10 +6,16 @@ html {
 	/* font-family: Georgia, serif; */
 }
 
-body {
+h3 {
+	font-size: 1.5em;
+	font-size: clamp(1rem, 4vw, 1.5rem);
+}
+header,
+main {
 	padding: 0 20%;
 	/* Use fallback font */
 	font-family: sans-serif;
+	background-color: #afe2cf;
 }
 
 .enhanced-font body {
@@ -17,13 +23,25 @@ body {
 }
 
 header {
-	margin-bottom: 3em;
+	padding-bottom: 3em;
 }
 
 header h1 {
 	font-size: 2.5em;
+	font-size: clamp(2rem, 5vw, 3rem);
+	padding-top: 1em;
 }
 
+.container p {
+	min-width: 20em;
+	font-size: 1em;
+	font-size: clamp(0.5rem, 3vw, 1rem);
+}
+.container h2 {
+	font-size: 1em;
+	font-size: clamp(1rem, 4vw, 2rem);
+	margin-bottom: 1em;
+}
 article {
 	font-size: 1em;
 }
@@ -33,17 +51,93 @@ article {
 	flex-direction: column;
 	align-items: center;
 }
-
+.metaphor h3 {
+	min-width: 15em;
+	padding: 10% 0;
+}
 .metaphor img {
 	display: block;
 	width: 50em;
 	height: 25em;
 }
 
+.pies {
+	padding: 10% 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.pies img {
+	width: 290px;
+	height: 295px;
+	position: center;
+}
+
+.pies div {
+	width: 290px;
+	height: 295px;
+	background-image: url('/pe/img/icing-transparent.png');
+	background-position: center;
+	background-size: cover;
+}
+
+li pre {
+	border: 1px solid rgb(109, 109, 109);
+	padding: 10px;
+	width: auto;
+	margin: 10px auto;
+	border-radius: 20px;
+}
+
+li pre code {
+	width: min-content;
+	margin: 0 auto;
+}
+
+footer {
+	display: flex;
+	padding: 50px 0;
+	background-color: rgb(46, 46, 46);
+	color: white;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+footer h3 {
+	padding-bottom: 1em;
+}
+
 footer ul {
 	list-style: none;
 }
 
+footer ul li a {
+	text-decoration: underline solid white;
+	text-align: center;
+	color: white;
+}
+
+.best-practices {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10% 0;
+}
+.best-practices h2 {
+	margin-bottom: 1em;
+}
+.best-practices ul {
+	list-style: none;
+	min-width: 25em;
+	font-size: 1em;
+	font-size: clamp(0.7rem, 2vw, 1.5rem);
+}
+.best-practices ul li {
+	margin: 0.5em 0;
+}
 .wrapper {
 	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
