@@ -1,0 +1,61 @@
+*,
+html {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* font-family: Georgia, serif; */
+}
+
+body {
+	padding: 0 20%;
+	/* Use fallback font */
+	font-family: sans-serif;
+}
+
+.enhanced-font body {
+	font-family: Open Sans;
+}
+
+header {
+	margin-bottom: 3em;
+}
+
+header h1 {
+	font-size: 2.5em;
+}
+
+article {
+	font-size: 1em;
+}
+
+.metaphor {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.metaphor img {
+	display: block;
+	width: 50em;
+	height: 25em;
+}
+
+footer ul {
+	list-style: none;
+}
+
+.wrapper {
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+@supports not (display: flex) {
+	.wrapper {
+		display: block; /* alternative styles */
+	}
+}
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+	/* styles */
+}

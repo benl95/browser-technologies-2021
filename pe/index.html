@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body
+       <header>
+         <h1>Progressive Enchancement</h1>
+       </header>
+       <main>
+         <section>
+            <article>
+               <h2>What is Progressive Enchancement?</h2>
+               <p>Progressive Enhancement is een strategie in web design die de nadruk legt op web content first. Dit houdt in dat de content wordt gescheiden van de semantiek van de presentatie. Het uiteindelijk doel van Progressive Enhancement is dat de <strong>basis content</strong> van een website/applicatie voor <strong>iedereen</strong> beschikbaar is, gebruikers die een browser hebben met features krijgen de <strong>enhanced</strong> versie van een website te zien.
+               </p>
+               <section class="metaphor">
+                  <h3>In een simpele beeldvorming is Progressive Enchancement de scheiding van HTML, CSS en Javascript zoals onderstaande afbeelding:</h3>
+                  <img src="img/metaphor.png" alt="Layers of Progressive Enchancement in a pie metaphor">
+               </section>
+               <section class="best-practices">
+                  <h3>Best practices</h3>
+                  <ul>
+                     <li>
+                        Om ervoor te zorgen dat je HTML semantisch is is het belangrijk om <strong>inline styling</strong> te <strong>vermijden</strong>. Hierdoor kun je gemakkelijker een style veranderen als iemand op een andere browser of device zit.
+                     </li>
+                     <li>
+                        Zorg er ook voor dat het <strong>JavaScript gedrag niet in de HTML wordt gedefinieerd, maar alleen in het javascript bestand </strong>. Het is bijvoorbeeld beter om een onclick element niet op het HTML element toe te voegen, maar door deze te selecteren via JavaScript d.m.v. een querySelector en vervolgens een eventlistener daaraan toe te voegen.
+                     </li>
+                     <li>
+                        Als een gebruiker op een erg sloom netwerk zit, kan het soms de experience zodanig verslomen als je de fonts inlaad als webfont. Het is daarom verstandig om eerst een systeemfont in te stellen, wanneer de content is geladen laad je dan het webfont in.
+                     </li>
+                     <li>
+                        Door een mobile-first benadering aan te gaan zorg je ervoor dat er zoveel mogelijk regels css worden hergebruikt. Dat betekent dus dat er minder regels css zijn, dus ook minder voor de gebruiker om in te laden.
+                     </li>
+                     <li>
+                        Lazy loading is een manier om afbeeldingen pas in te laden zodra deze in de viewport komen van de gebruiker. Helaas wordt hiervoor ook JavaScript gebruikt en heb je dus een manier nodig om de afbeeldingen alsnog te tonen aan mensen die geen JavaScript gebruiken.
+                     </li>
+                  </ul>JS zelf.<strong></strong><strong></strong>
+                <!-- i.e <img data-src="path/to/image.jpg" class="lazy-load"></img>
+                <noscript>
+                    <img  src="path/to/image.jpg"></img>
+                </noscript> -->
+                </section>
+            </article>
+         </section>
+       </main>
+       <footer>
+          <h3>Bronnen</h3>
+          <ul>
+             <li><a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Wikipedia Progressive Enchancement</a></li>
+             <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement#learn_more">MDN Docs</a></li>
+             <li><a href="https://alistapart.com/article/understandingprogressiveenhancement/">Understanding Progressive Enchancement</a></li>
+             <li><a href="https://briefs.video/videos/is-progressive-enhancement-dead-yet/">Is Progressive Enhancement Dead Yet?</a></li>
+             <li><a href="https://blog.logrocket.com/a-quick-introduction-to-progressive-enhancement/">Introduction to Progressive Enchancement</a></li>
+          </ul>
+       </footer>
+        <noscript>Turn on your Javascript!</noscript>
+        <script src="js/main.js" async defer></script>
+    </body>
+</html>
