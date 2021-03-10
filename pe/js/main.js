@@ -2,7 +2,7 @@ if ('querySelector' in document) {
 	// enhance the application
 	let cont = document.querySelector('.pies');
 	let img = document.createElement('img');
-	img.src = '/pe/img/candles-transparent.png';
+	img.src = '../img/candles-transparent.png';
 
 	cont.appendChild(img);
 }
