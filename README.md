@@ -1,3 +1,7 @@
+# Github pages links
+
+https://benl95.github.io/browser-technologies-2021/pe/
+
 # Browser Technologies @cmda-minor-web 20-21
 
 //Robuuste, toegankelijke websites ontwerpen en maken …
