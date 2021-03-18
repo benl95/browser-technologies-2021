@@ -6,4 +6,9 @@ router.get('/', (req, res) => {
 	});
 });
 
+router.post('/', (req, res) => {
+	console.log(req.body);
+	res.redirect('/home');
+});
+
 module.exports = router;

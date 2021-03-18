@@ -21,11 +21,18 @@ app.engine(
 	})
 );
 
+// Set routing
 app.use(express.static(path.join(__dirname, '/public')))
+	.use(
+		express.urlencoded({
+			extended: true,
+		})
+	)
 	.use('/', login)
 	.use('/home', home)
 	.use('/survey/:id', survey);
 
+// Server is hosted on specified port
 app.listen(port, (error) => {
 	if (error) {
 		console.log(error);
