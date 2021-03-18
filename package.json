@@ -1,0 +1,35 @@
+{
+  "name": "browser-technologies-2021",
+  "version": "1.0.0",
+  "description": "Progressive Web App for an online survey for the minor Web Development & Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benl95/browser-technologies-2021.git"
+  },
+  "keywords": [
+    "PWA"
+  ],
+  "author": "Ben Langenberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benl95/browser-technologies-2021/issues"
+  },
+  "homepage": "https://github.com/benl95/browser-technologies-2021#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2"
+  }
+}
