@@ -6,29 +6,10 @@
 
          <label for="docent">Docenten:</label>
 
-         <input type="radio" id="docent" name="docent" value="Peter Paul Koch">
-         <label for="docent">Peter Paul Koch</label>
-
-         <input type="radio" id="docent" value="Joost Faber">
-         <label for="docent">Joost Faber</label>
-
-         <input type="radio" id="docent" value="Koop Reynders">
-         <label for="docent">Koop Reynders</label>
-
-         <input type="radio" id="docent" value="Suus ten Voorden">
-         <label for="docent">Suus ten Voorden</label>
-
-         <input type="radio" id="docent" value="Vasilis van Gemert">
-         <label for="docent">Vasilis van Gemert</label>
-
-         <input type="radio" id="docent" value="Sanne 't Hooft">
-         <label for="docent">Sanne 't Hooft</label>
-
-         <input type="radio" id="docent" value="Justus Sturkenboom">
-         <label for="docent">Justus Sturkenboom</label>
-
-         <input type="radio" id="docent" value="Guido Bouwman">
-         <label for="docent">Guido Bouwman</label>
+         {{#each teachers}}
+            <input type="radio" id="docent" name="docent" value="{{this}}">
+            <label for="docent">{{this}}</label>
+         {{/each}}
 
          <label for="begin-datum">Begin datum:</label>
          <input type="date" id="begin-datum" name="begin-datum"required>
@@ -36,14 +17,14 @@
          <label for="eind-datum">Eind datum:</label>
          <input type="date" id="eind-datum" name="begin-datum"required>
 
-         <label for="lesstof">Lesstof</label>
-         <input type="range" id="lesstof" min="1" max="10">
+         <label for="lesstof">Lesstof:</label>
+         <input type="range" id="lesstof" min="1" max="10" required>
 
-         <label for="">Uitleg</label>
-         <input type="range" id="uitleg" min="1" max="10">
+         <label for="">Uitleg:</label>
+         <input type="range" id="uitleg" min="1" max="10" required>
 
-         <label for="eigen-inzicht">Eigen inzicht</label>
-         <input type="range" id="eigen-inzicht" min="1" max="10">
+         <label for="eigen-inzicht">Eigen inzicht:</label>
+         <input type="range" id="eigen-inzicht" min="1" max="10" required>
       </fieldset>
       <input type="submit" value="Bevestig">
    </form>
