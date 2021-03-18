@@ -1,5 +1,5 @@
 <body>
-   <form method="post">
+   <form action="/survey/:id" method="post">
       <fieldset>
          <label for="name">Naam:</label>
          <input type="text" id="name" name="name" required>
@@ -12,19 +12,19 @@
          {{/each}}
 
          <label for="begin-datum">Begin datum:</label>
-         <input type="date" id="begin-datum" name="begin-datum"required>
+         <input type="date" id="datum" name="datum"required>
          
          <label for="eind-datum">Eind datum:</label>
-         <input type="date" id="eind-datum" name="begin-datum"required>
+         <input type="date" id="datum" name="datum"required>
 
          <label for="lesstof">Lesstof:</label>
-         <input type="range" id="lesstof" min="1" max="10" required>
+         <input type="range" id="lesstof" min="1" max="10" name="lesstof" required>
 
          <label for="">Uitleg:</label>
-         <input type="range" id="uitleg" min="1" max="10" required>
+         <input type="range" id="uitleg" min="1" max="10" name="uitleg" required>
 
          <label for="eigen-inzicht">Eigen inzicht:</label>
-         <input type="range" id="eigen-inzicht" min="1" max="10" required>
+         <input type="range" id="eigen-inzicht" min="1" max="10" name="inzicht" required>
       </fieldset>
       <input type="submit" value="Bevestig">
    </form>
