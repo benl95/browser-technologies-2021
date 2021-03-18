@@ -6,7 +6,7 @@
 
          <label for="docent">Docenten:</label>
 
-         <input type="radio" id="docent" value="Peter Paul Koch">
+         <input type="radio" id="docent" name="docent" value="Peter Paul Koch">
          <label for="docent">Peter Paul Koch</label>
 
          <input type="radio" id="docent" value="Joost Faber">
@@ -30,12 +30,20 @@
          <input type="radio" id="docent" value="Guido Bouwman">
          <label for="docent">Guido Bouwman</label>
 
-
          <label for="begin-datum">Begin datum:</label>
          <input type="date" id="begin-datum" name="begin-datum"required>
          
          <label for="eind-datum">Eind datum:</label>
          <input type="date" id="eind-datum" name="begin-datum"required>
+
+         <label for="lesstof">Lesstof</label>
+         <input type="range" id="lesstof" min="1" max="10">
+
+         <label for="">Uitleg</label>
+         <input type="range" id="uitleg" min="1" max="10">
+
+         <label for="eigen-inzicht">Eigen inzicht</label>
+         <input type="range" id="eigen-inzicht" min="1" max="10">
       </fieldset>
       <input type="submit" value="Bevestig">
    </form>
