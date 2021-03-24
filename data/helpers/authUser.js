@@ -62,7 +62,6 @@ function authUser(studentId, studentName, req, res) {
 		// Add data to JSON file
 		fs.writeFileSync('./data/data.json', dataToJSON, (err) => {
 			if (err) throw err;
-			else console.log('New user created');
 		});
 		return res.redirect('/home');
 	}
