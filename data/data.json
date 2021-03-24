@@ -1,0 +1,28 @@
+{
+	"users": [
+		{
+			"id": "500776405",
+			"name": "Harry Langenberg",
+			"surveys": [
+				{ "survey": "wafs", "complete": false },
+				{ "survey": "csstr", "complete": false },
+				{ "survey": "pwa", "complete": false },
+				{ "survey": "bt", "complete": false },
+				{ "survey": "rtwa", "complete": false },
+				{ "survey": "ucd", "complete": false }
+			]
+		},
+		{
+			"id": "500776406",
+			"name": "Ben Langenberg",
+			"surveys": [
+				{ "survey": "wafs", "complete": false },
+				{ "survey": "csstr", "complete": false },
+				{ "survey": "pwa", "complete": false },
+				{ "survey": "bt", "complete": false },
+				{ "survey": "rtwa", "complete": false },
+				{ "survey": "ucd", "complete": false }
+			]
+		}
+	]
+}
