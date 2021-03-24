@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { authUser } = require('../../data/helpers/authUser');
 
 router.get('/', (req, res) => {
 	res.render('login', {
@@ -7,8 +8,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-	console.log(req.body);
-	res.redirect('/home');
+	const studentId = req.body.id;
+	const studentName = req.body.name;
+	authUser(studentId, studentName, req, res);
 });
 
 module.exports = router;
