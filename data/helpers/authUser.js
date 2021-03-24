@@ -46,22 +46,26 @@ function authUser(studentId, studentName, req, res) {
 	});
 	// Convert JSON file to object
 	const obj = JSON.parse(file);
-	// Push object into array
-	data.push(obj);
+	// Assign obj.users to data
+	data = obj.users;
 	// Check if user exists
-	if (data.some(({ id }) => id === studentId)) {
+	if (data.some((user) => user.id === studentId)) {
 		// If user exists, redirect to home page
 		return res.redirect('/home');
 	} else {
-		// Create new object
+		// Create new user object
 		const newUser = createNewUser(studentId, studentName);
-		// Push newUser into data array
-		data.push(newUser);
-		// Convert array back to JSON
-		const dataToJSON = JSON.stringify(data, null, 2);
+		// Push newUser object into obj
+		obj.users.push(newUser);
+		// Stringify object to JSON
+		const json = JSON.stringify(obj);
 		// Add data to JSON file
-		fs.writeFileSync('./data/data.json', dataToJSON, (err) => {
-			if (err) throw err;
+		fs.writeFileSync('./data/data.json', json, (err) => {
+			if (err) {
+				console.log(err);
+			} else {
+				console.log('User created');
+			}
 		});
 		return res.redirect('/home');
 	}
