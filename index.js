@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 		})
 	)
 	.use('/', login)
-	.use('/home', home)
+	.use('/home/:id', home)
 	.use('/survey/:id', survey);
 
 // Server is hosted on specified port

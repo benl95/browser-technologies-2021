@@ -40,18 +40,32 @@ function createNewUser(studentId, studentName) {
 function authUser(studentId, studentName, req, res) {
 	// Declare empty array
 	let data = [];
+
 	// Read data file
 	const file = fs.readFileSync('./data/data.json', 'utf-8', (err) => {
 		if (err) console.error(err);
 	});
-	// Convert JSON file to object
+
+	// Parse JSON file to object
 	const obj = JSON.parse(file);
+
 	// Assign obj.users to data
 	data = obj.users;
+
 	// Check if user exists
 	if (data.some((user) => user.id === studentId)) {
-		// If user exists, redirect to home page
-		return res.redirect('/home');
+		// Get user data
+		const user = data.filter((user) => {
+			if (user.id === studentId) {
+				return user;
+			}
+		});
+
+		// Get id user
+		const id = user[0].id;
+
+		// If user exists, redirect to home page and pass user id as parameter
+		return res.redirect(`/home/${id}`);
 	} else {
 		// Create new user object
 		const newUser = createNewUser(studentId, studentName);
