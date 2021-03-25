@@ -1,13 +1,10 @@
 <body>
    <form action="/survey/{{course}}/{{id}}" method="post">
       <fieldset>
-         <label for="name">Naam:</label>
-         <input type="text" id="name" name="name" required>
-
          <label for="docent">Docenten:</label>
 
          {{#each teachers}}
-            <input type="radio" id="docent" name="docent" value="{{this}}">
+            <input type="radio" id="docent" name="docent" value="{{this}}" required>
             <label for="docent">{{this}}</label>
          {{/each}}
 
