@@ -9,8 +9,8 @@ function getParams(req, res) {
 	return params;
 }
 
-function getDataFile(file) {
-	const file = fs.readFileSync(`./data/${file}`, 'utf-8', (err) => {
+function getDataFile() {
+	const file = fs.readFileSync(`./data/data.json`, 'utf-8', (err) => {
 		if (err) console.log(err);
 	});
 
@@ -18,10 +18,35 @@ function getDataFile(file) {
 }
 
 function parseData(data) {
-	const data = JSON.parse(data);
-	const users = data.users;
+	const parse = JSON.parse(data);
+	const users = parse.users;
 
 	return users;
 }
 
-module.exports = { storeUserSurveyData };
+function findUser(data, params, postData, req, res) {
+	console.log(data);
+
+	data.forEach((entry) => {
+		if (entry.id === params.id) {
+			const surveys = entry.surveys;
+			const course = surveys.find(
+				(course) => course.survey === params.course
+			);
+			course.answers = postData;
+			course.complete = true;
+
+			const obj = {
+				users: data,
+			};
+
+			const json = JSON.stringify(obj);
+
+			fs.writeFileSync('./data/data.json', json, 'utf-8', (err) => {
+				if (err) console.log(err);
+			});
+		}
+	});
+}
+
+module.exports = { getParams, getDataFile, parseData, findUser };
