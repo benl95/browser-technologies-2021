@@ -81,7 +81,7 @@ function authUser(studentId, studentName, req, res) {
 				console.log('User created');
 			}
 		});
-		return res.redirect('/home');
+		return res.redirect(`/home/${studentId}`);
 	}
 }
 
