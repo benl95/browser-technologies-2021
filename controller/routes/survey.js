@@ -29,6 +29,7 @@ router.get('/survey/:course/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+	storeDataInJsonFile(req.body);
 	res.redirect('/home');
 });
 
