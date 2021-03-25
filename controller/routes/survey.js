@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const fs = require('fs');
 
 const names = [
 	'Vasilis van Gemert',
@@ -15,25 +14,21 @@ const names = [
 
 function storeDataInJsonFile(data) {
 	const dataToJson = JSON.stringify(data);
-	return fs.appendFileSync(
-		'./data/survey-data.json',
-		dataToJson + ',\n',
-		(error) => {
-			if (error) throw error;
-		}
-	);
+	return fs.appendFileSync('./data/data.json', dataToJson + ',\n', (error) => {
+		if (error) throw error;
+	});
 }
 
-router.get('/', (req, res) => {
+router.get('/survey/:course/:id', (req, res) => {
 	res.render('form', {
 		title: 'Enquete',
 		teachers: names,
+		course: req.params.course,
 		id: req.params.id,
 	});
 });
 
 router.post('/', (req, res) => {
-	storeDataInJsonFile(req.body);
 	res.redirect('/home');
 });
 
