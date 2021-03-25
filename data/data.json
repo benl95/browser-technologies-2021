@@ -23,6 +23,18 @@
 				{ "survey": "rtwa", "complete": false },
 				{ "survey": "ucd", "complete": false }
 			]
+		},
+		{
+			"id": "123",
+			"name": "gekkegerrie",
+			"surveys": [
+				{ "survey": "wafs", "complete": false },
+				{ "survey": "csstr", "complete": false },
+				{ "survey": "pwa", "complete": false },
+				{ "survey": "bt", "complete": false },
+				{ "survey": "rtwa", "complete": false },
+				{ "survey": "ucd", "complete": false }
+			]
 		}
 	]
 }
