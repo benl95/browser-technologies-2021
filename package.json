@@ -4,7 +4,7 @@
 	"description": "Progressive Web App for an online survey for the minor Web Development & Design",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index",
+		"start": "node index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {

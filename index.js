@@ -3,7 +3,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 // Require routes
 const login = require('./controller/routes/login.js');
