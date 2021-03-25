@@ -1,29 +1,30 @@
 <body>
    <h1>Minor Web Design & Development Enquetes</h1>
    <section>
-      <article>
-         <h2>Web App From Scratch</h2>
-         <a href="/survey/wafs/{{id}}">Vul enquete in</a>
-      </article>
-      <article>
-         <h2>CSS To The Rescue</h2>
-         <a href="/survey/csstr/{{id}}">Vul enquete in</a>
-      </article>
-      <article>
-         <h2>Browser Technologies</h2>
-         <a href="/survey/bt/{{id}}">Vul enquete in</a>
-      </article>
-      <article>
-         <h2>Progressive Web App</h2>
-         <a href="/survey/pwa/{{id}}">Vul enquete in</a>
-      </article>
-      <article>
-         <h2>Real Time Web</h2>
-         <a href="/survey/rtwa/{{id}}">Vul enquete in</a>
-      </article>
-      <article>
-         <h2>User Centered Design</h2>
-         <a href="/survey/ucd/{{id}}">Vul enquete in</a>
-      </article>
+         <section>
+            <h2>Complete Surveys</h2>
+            <section>
+               {{#each data}}
+                  {{#if this.complete}}
+                     <article>
+                        <h2>{{this.course}}</h2>
+                     </article>
+                  {{/if}}
+               {{/each}}
+            </section>
+         </section>
+         <section>
+            <h2>Incomplete Surveys</h2>
+            <section>
+               {{#each data}}
+                  {{#unless this.complete}}
+                     <article>
+                        <h2>{{this.course}}</h2>
+                        <a href="/survey/{{this.survey}}/{{../id}}">Vul Enquete in</a>
+                     </article>
+                  {{/unless}}
+               {{/each}}
+            </section>
+         </section>
    </section>
 </body>
