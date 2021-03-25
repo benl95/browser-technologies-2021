@@ -24,9 +24,37 @@ function parseData(data) {
 	return users;
 }
 
-function findUser(data, params, postData, req, res) {
-	console.log(data);
+function findUserSurveys(data, id) {
+	data.forEach((entry) => {
+		if (entry.id === id) {
+			return entry.surveys;
+		}
+	});
 
+	const surveys = data[0].surveys;
+
+	return surveys;
+}
+
+function getCompleteStatus(data) {
+	const surveys = data.map((entry) => {
+		const course = entry.courseName;
+		const complete = entry.complete;
+		const abbreviation = entry.survey;
+
+		const object = {
+			survey: abbreviation,
+			course: course,
+			complete: complete,
+		};
+
+		return object;
+	});
+
+	return surveys;
+}
+
+function findUser(data, params, postData) {
 	data.forEach((entry) => {
 		if (entry.id === params.id) {
 			const surveys = entry.surveys;
@@ -49,4 +77,11 @@ function findUser(data, params, postData, req, res) {
 	});
 }
 
-module.exports = { getParams, getDataFile, parseData, findUser };
+module.exports = {
+	getParams,
+	getDataFile,
+	parseData,
+	findUser,
+	findUserSurveys,
+	getCompleteStatus,
+};
