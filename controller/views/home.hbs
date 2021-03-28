@@ -1,30 +1,25 @@
 <body>
-   <h1>Minor Web Design & Development Enquetes</h1>
-   <section>
-         <section>
-            <h2>Complete Surveys</h2>
-            <section>
-               {{#each data}}
-                  {{#if this.complete}}
-                     <article>
-                        <h2>{{this.course}}</h2>
-                     </article>
-                  {{/if}}
-               {{/each}}
-            </section>
-         </section>
-         <section>
-            <h2>Incomplete Surveys</h2>
-            <section>
-               {{#each data}}
-                  {{#unless this.complete}}
-                     <article>
-                        <h2>{{this.course}}</h2>
-                        <a href="/survey/{{this.survey}}/{{../id}}">Vul Enquete in</a>
-                     </article>
-                  {{/unless}}
-               {{/each}}
-            </section>
-         </section>
-   </section>
+   <main>
+      <h1>Minor Web Design & Development Enquetes</h1>
+      <section>
+         <h3>Completed surveys</h3>
+         <ul>
+            {{#each data}}
+            {{#if this.complete}}
+            <li>{{this.course}}</li>
+            {{/if}}
+            {{/each}}
+         </ul>
+      </section>
+      <section>
+         <h3>To do</h3>
+         <ul>
+            {{#each data}}
+            {{#unless this.complete}}
+            <li><a href="/survey/{{this.survey}}/{{../id}}">{{this.course}}</a></li>
+            {{/unless}}
+            {{/each}}
+         </ul>
+      </section>
+   </main>
 </body>
