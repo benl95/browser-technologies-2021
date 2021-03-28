@@ -5,6 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node app.js",
+		"prebuild:css": "rimraf \"public/css\"",
+		"build:css": "node ./scripts/build-css.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
