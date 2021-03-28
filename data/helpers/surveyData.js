@@ -10,7 +10,7 @@ function getParams(req, res) {
 }
 
 function getDataFile() {
-	const file = fs.readFileSync(`./data/data.json`, 'utf-8', (err) => {
+	const file = fs.readFileSync('./data/data.json', 'utf-8', err => {
 		if (err) console.log(err);
 	});
 
@@ -25,7 +25,7 @@ function parseData(data) {
 }
 
 function findUserSurveys(data, id) {
-	data.forEach((entry) => {
+	data.forEach(entry => {
 		if (entry.id === id) {
 			return entry.surveys;
 		}
@@ -37,7 +37,7 @@ function findUserSurveys(data, id) {
 }
 
 function getCompleteStatus(data) {
-	const surveys = data.map((entry) => {
+	const surveys = data.map(entry => {
 		const course = entry.courseName;
 		const complete = entry.complete;
 		const abbreviation = entry.survey;
@@ -55,12 +55,10 @@ function getCompleteStatus(data) {
 }
 
 function findUser(data, params, postData) {
-	data.forEach((entry) => {
+	data.forEach(entry => {
 		if (entry.id === params.id) {
 			const surveys = entry.surveys;
-			const course = surveys.find(
-				(course) => course.survey === params.course
-			);
+			const course = surveys.find(course => course.survey === params.course);
 			course.answers = postData;
 			course.complete = true;
 
@@ -70,7 +68,7 @@ function findUser(data, params, postData) {
 
 			const json = JSON.stringify(obj);
 
-			fs.writeFileSync('./data/data.json', json, 'utf-8', (err) => {
+			fs.writeFileSync('./data/data.json', json, 'utf-8', err => {
 				if (err) console.log(err);
 			});
 		}
