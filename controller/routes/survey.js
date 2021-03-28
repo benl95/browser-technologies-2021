@@ -1,25 +1,16 @@
 const router = require('express').Router();
-const fs = require('fs');
 const {
 	getParams,
 	getDataFile,
 	parseData,
 	findUser,
 } = require('../../data/helpers/surveyData');
-
-const names = [
-	'Vasilis van Gemert',
-	'Justus Sturkenboom',
-	'Guido Bouwman',
-	'Peter Paul Koch',
-	'Suus ten Voorde',
-	'Joost Faber',
-	'Sanne t Hooft',
-	'Declan Rek',
-	'Koop Reynders',
-];
+const { loadData } = require('../../data/helpers/form');
 
 router.get('/survey/:course/:id', (req, res) => {
+	const course = req.params.course;
+	const names = loadData(course);
+
 	res.render('form', {
 		title: 'Enquete',
 		teachers: names,

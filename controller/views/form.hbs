@@ -1,12 +1,17 @@
 <body>
    <form action="/survey/{{course}}/{{id}}" method="post">
       <fieldset>
-         <label for="docent">Docenten:</label>
 
+         <fieldset>
+            <label for="docent">Docenten:</label>
          {{#each teachers}}
-            <input type="radio" id="docent" name="docent" value="{{this}}" required>
-            <label for="docent">{{this}}</label>
+            <input type="radio" id="docent" name="docent" value="{{this.teacherOne}}" required>
+            <label for="docent">{{this.teacherOne}}</label>
+
+            <input type="radio" id="docent" name="docent" value="{{this.teacherTwo}}" required>
+            <label for="docent">{{this.teacherTwo}}</label>
          {{/each}}
+         </fieldset>
 
          <label for="begin-datum">Begin datum:</label>
          <input type="date" id="datum" name="datum"required>

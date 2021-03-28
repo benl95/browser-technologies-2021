@@ -1,0 +1,34 @@
+{
+	"courses": [
+		{
+			"id": "wafs",
+			"teacherOne": "Susanne ten Voorde",
+			"teacherTwo": "Joost Faber"
+		},
+		{
+			"id": "csstr",
+			"teacherOne": "Vasilis van Gemert",
+			"teacherTwo": "Sanne t Hooft"
+		},
+		{
+			"id": "pwa",
+			"teacherOne": "Joost Faber",
+			"teacherTwo": "Declan Rek"
+		},
+		{
+			"id": "bt",
+			"teacherOne": "Peter Paul Koch",
+			"teacherTwo": "Koop Reynders"
+		},
+		{
+			"id": "rtwa",
+			"teacherOne": "Justus Sturkenboom",
+			"teacherTwo": "Guido Bouwman"
+		},
+		{
+			"id": "ucd",
+			"teacherOne": "Vasilis van Gemert",
+			"teacherTwo": "Koop Reynders"
+		}
+	]
+}
