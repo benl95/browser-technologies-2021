@@ -6,7 +6,9 @@
 	"scripts": {
 		"start": "node app.js",
 		"prebuild:css": "rimraf \"public/css\"",
+		"prebuild:js": "rimraf \"public/js\"",
 		"build:css": "node ./scripts/build-css.js",
+		"build:js": "node ./scripts/build-js.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -32,6 +34,7 @@
 		"gulp-autoprefixer": "^7.0.1",
 		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
+		"gulp-uglify-es": "^2.0.0",
 		"nodemon": "^2.0.7",
 		"rimraf": "^3.0.2",
 		"uglify-es": "^3.3.9"
