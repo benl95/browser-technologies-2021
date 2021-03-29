@@ -24,10 +24,12 @@ function loadInputs() {
 			`${userId}-${courseId}-${input.name}`
 		);
 
-		if (input.type === 'radio' && input.value === userInput) {
-			input.checked = true;
-		} else if (input.type !== 'radio') {
-			input.value = userInput;
+		if (userInput) {
+			if (input.type === 'radio' && input.value === userInput) {
+				input.checked = true;
+			} else if (input.type !== 'radio') {
+				input.value = userInput;
+			}
 		}
 	});
 }
