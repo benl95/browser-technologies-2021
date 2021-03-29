@@ -1,9 +1,9 @@
 <body>
-   <main>
-      <h1>Minor Web Design & Development Enquetes</h1>
+   <main class='list-container'>
+      <h1>Minor <span>Web Design</span> & <span>Development</span> Enquetes</h1>
       <section>
          <h3>Completed surveys</h3>
-         <ul>
+         <ul class="complete">
             {{#each data}}
             {{#if this.complete}}
             <li>{{this.course}}</li>
@@ -13,7 +13,7 @@
       </section>
       <section>
          <h3>To do</h3>
-         <ul>
+         <ul class="todo">
             {{#each data}}
             {{#unless this.complete}}
             <li><a href="/survey/{{this.survey}}/{{../id}}">{{this.course}}</a></li>

@@ -1,33 +1,85 @@
 <body>
-   <form action="/survey/{{course}}/{{id}}" method="post" id="course-form">
-      <fieldset>
+   <main id="form-container">
+      <form action="/survey/{{course}}/{{id}}" method="post" id="course-form">
+               <fieldset class="radio">
+                  <label for="docent">Docenten</label>
+               {{#each teachers}}
+                  <input type="radio" id="docent-1" name="docent" value="{{this.teacherOne}}" required>
+                  <label for="docent-1">{{this.teacherOne}}</label>
 
-         <fieldset>
-            <label for="docent">Docenten:</label>
-         {{#each teachers}}
-            <input type="radio" id="docent" name="docent" value="{{this.teacherOne}}" required>
-            <label for="docentOne">{{this.teacherOne}}</label>
+                  <input type="radio" id="docent-2" name="docent" value="{{this.teacherTwo}}" required>
+                  <label for="docent-2">{{this.teacherTwo}}</label>
+               {{/each}}
+               </fieldset>
 
-            <input type="radio" id="docent" name="docent" value="{{this.teacherTwo}}" required>
-            <label for="docentTwo">{{this.teacherTwo}}</label>
-         {{/each}}
-         </fieldset>
+               <fieldset class="date">
+                  <label for="begin-datum">Begin datum</label>
+                  <input type="date" id="datum" name="begin-datum"required>
+                  
+                  <label for="eind-datum">Eind datum</label>
+                  <input type="date" id="datum" name="eind-datum"required>
+               </fieldset>
 
-         <label for="begin-datum">Begin datum:</label>
-         <input type="date" id="datum" name="begin-datum"required>
-         
-         <label for="eind-datum">Eind datum:</label>
-         <input type="date" id="datum" name="eind-datum"required>
+               <fieldset class="radio">
+                  <label for="lesstof">Lesstof</label>
 
-         <label for="lesstof">Lesstof:</label>
-         <input type="range" id="lesstof" min="1" max="10" name="lesstof" required>
+                  <input type="radio" id="lesstof-1" name="lesstof" value="Onvoldoende" required>
+                  <label for="lesstof-1">Onvoldoende</label>
 
-         <label for="">Uitleg:</label>
-         <input type="range" id="uitleg" min="1" max="10" name="uitleg" required>
+                  <input type="radio" id="lesstof-2" name="lesstof" value="Matig" required>
+                  <label for="lesstof-2">Matig</label>
 
-         <label for="eigen-inzicht">Eigen inzicht:</label>
-         <input type="range" id="eigen-inzicht" min="1" max="10" name="inzicht" required>
-      </fieldset>
-      <input type="submit" value="Bevestig">
-   </form>
+                  <input type="radio" id="lesstof-3" name="lesstof" value="Voldoende" required>
+                  <label for="lesstof-3">Voldoende</label>
+
+                  <input type="radio" id="lesstof-4" name="lesstof" value="Goed" required>
+                  <label for="lesstof-4">Goed</label>
+
+                  <input type="radio" id="lesstof-5" name="lesstof" value="Uitstekend" required>
+                  <label for="lesstof-5">Uitstekend</label>
+               </fieldset>
+
+               <fieldset class="radio">
+                  <label for="">Uitleg</label>
+                  
+                  <input type="radio" id="uitleg-1" name="uitleg" value="Onvoldoende" required>
+                  <label for="uitleg-1">Onvoldoende</label>
+
+                  <input type="radio" id="uitleg-2" name="uitleg" value="Matig" required>
+                  <label for="uitleg-2">Matig</label>
+
+                  <input type="radio" id="uitleg-3" name="uitleg" value="Voldoende" required>
+                  <label for="uitleg-3">Voldoende</label>
+
+                  <input type="radio" id="uitleg-4" name="uitleg" value="Goed" required>
+                  <label for="uitleg-4">Goed</label>
+
+                  <input type="radio" id="uitleg-5" name="uitleg" value="Uitstekend" required>
+                  <label for="uitleg-5">Uitstekend</label>
+               </fieldset>
+
+               <fieldset class="radio">
+                  <label for="eigen-inzicht">Eigen inzicht</label>
+
+                  <input type="radio" id="eigen-inzicht-1" name="eigen-inzicht" value="Onvoldoende" required>
+                  <label for="eigen-inzicht-1">Onvoldoende</label>
+
+                  <input type="radio" id="eigen-inzicht-2" name="eigen-inzicht" value="Matig" required>
+                  <label for="eigen-inzicht-2">Matig</label>
+
+                  <input type="radio" id="eigen-inzicht-3" name="eigen-inzicht" value="Voldoende" required>
+                  <label for="eigen-inzicht-3">Voldoende</label>
+
+                  <input type="radio" id="eigen-inzicht-4" name="eigen-inzicht" value="Goed" required>
+                  <label for="eigen-inzicht-4">Goed</label>
+
+                  <input type="radio" id="eigen-inzicht-5" name="eigen-inzicht" value="Uitstekend" required>
+                  <label for="eigen-inzicht-5">Uitstekend</label>
+               </fieldset>
+
+            <input type="submit" value="Bevestig" id="button">
+
+      </form>
+   </main>
+   <script defer src="/js/bundle.js"></script>
 </body>
