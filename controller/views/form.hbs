@@ -1,23 +1,23 @@
 <body>
-   <form action="/survey/{{course}}/{{id}}" method="post">
+   <form action="/survey/{{course}}/{{id}}" method="post" id="course-form">
       <fieldset>
 
          <fieldset>
             <label for="docent">Docenten:</label>
          {{#each teachers}}
             <input type="radio" id="docent" name="docent" value="{{this.teacherOne}}" required>
-            <label for="docent">{{this.teacherOne}}</label>
+            <label for="docentOne">{{this.teacherOne}}</label>
 
             <input type="radio" id="docent" name="docent" value="{{this.teacherTwo}}" required>
-            <label for="docent">{{this.teacherTwo}}</label>
+            <label for="docentTwo">{{this.teacherTwo}}</label>
          {{/each}}
          </fieldset>
 
          <label for="begin-datum">Begin datum:</label>
-         <input type="date" id="datum" name="datum"required>
+         <input type="date" id="datum" name="begin-datum"required>
          
          <label for="eind-datum">Eind datum:</label>
-         <input type="date" id="datum" name="datum"required>
+         <input type="date" id="datum" name="eind-datum"required>
 
          <label for="lesstof">Lesstof:</label>
          <input type="range" id="lesstof" min="1" max="10" name="lesstof" required>
