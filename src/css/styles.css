@@ -201,7 +201,7 @@ input[type='range']::-moz-range-thumb {
 	border: 1px solid var(--primary);
 	height: 36px;
 	width: 16px;
-	border-radius: 3px;
+	border-radius: 50%;
 	background: var(--primary);
 	cursor: pointer;
 }
