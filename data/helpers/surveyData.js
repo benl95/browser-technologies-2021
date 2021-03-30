@@ -25,13 +25,13 @@ function parseData(data) {
 }
 
 function findUserSurveys(data, id) {
-	data.forEach(entry => {
+	const user = data.filter(entry => {
 		if (entry.id === id) {
-			return entry.surveys;
+			return entry;
 		}
 	});
 
-	const surveys = data[0].surveys;
+	const surveys = user[0].surveys;
 
 	return surveys;
 }
@@ -60,6 +60,7 @@ function findUser(data, params, postData) {
 			const surveys = entry.surveys;
 			const course = surveys.find(course => course.survey === params.course);
 			course.answers = postData;
+			console.log(postData);
 			course.complete = true;
 
 			const obj = {
