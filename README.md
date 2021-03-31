@@ -15,6 +15,139 @@ Users must be able to fill in the following on the survey:
 -  Data will be saved
 -  User can continue where they left if they decide to come back later
 
+## Browser testing
+
+### Browsers
+
+Desktop:
+
+-  Google Chrome
+-  Firefox
+
+Mobile:
+
+-  Google Chrome
+-  Samsung internet
+
+### Test cases
+
+Desktop:
+
+-  Keyboard navigation
+-  Javascript disabled
+-  Look and feel
+
+Mobile:
+
+-  Javascript disabled
+-  Look and feel
+
+### Google Chrome Desktop
+
+Since I'm developing the application in Google Chrome I'm also testing it at the
+same time in this browser.
+
+-  Check if the `fallback input fields` work if Javascript is disabled.
+-  Check if keyboard navigation works
+-  Look and feel
+
+Results:
+
+Javascript disabled: The application works when Javascript is disabled. The
+slider enhancements dissapear from the DOM since it is made with Javascript and
+it return the Radio buttons will be displayed to grade a course.
+
+Keyboard navigation: Keyboard navigation works on the form for the `Sliders` and
+`Radio Buttons`
+
+### Firefox Desktop
+
+For the Firefox testing I tested the same test cases as in the Chrome Desktop
+Browser.
+
+-  Check if the `fallback input fields` work if Javascript is disabled
+-  Check if keyboard navigation works
+-  Look and feel
+
+Results:
+
+Javascript disabled: When Javascript is disabled the application works as it
+should be. The fallback `Radio Buttons` are rendered.
+
+Keyboard navigation: Keyboard navigation for the form works, but for `<a>`
+elements it doesn't. I did some research on this and I found the following
+Stackoverflow topic:
+
+[How to allow keyboard focus of links in Firefox?](https://stackoverflow.com/questions/11704828/how-to-allow-keyboard-focus-of-links-in-firefox)
+
+According to the topic users have to enable keyboard navigation on Firefox
+browser themselves.
+
+Look and feel: In the Firefox browser the `Sliders` were invisible. After some
+research I found out that sliders have to be styled specifically for Firefox.
+After implementing the following styling in my CSS the sliders were visible:
+
+```css
+input[type='range']::-moz-range-thumb {
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	border: 1px solid var(--primary);
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	background: var(--primary);
+	cursor: pointer;
+}
+
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: var(--primary);
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
+```
+
+### Google Chrome Mobile
+
+For Google Chrome Mobile I tested the following test cases:
+
+-  Check if the `fallback input fields` work if Javascript is disabled
+-  Look and feel
+
+Results:
+
+Javascript disabled: When Javascript is disabled the application works as it
+should be doing. The `fallback input fields` are rendered.
+
+Look and feel: On Google Chrome mobile the border of the login form input fields
+are almost invisible. To fix this I styled the `input[type="text"]` as
+following:
+
+```css
+input[type='range'] {
+	border: 1px solid var(--black);
+}
+```
+
+I put a border on the input fields and colored it black to make the input text
+field more visible to mobile users.
+
+### Samsung Internet
+
+For Samsung Internet I tested the following test cases:
+
+-  Check if the `fallback input fields` work if Javascript is disabled
+-  Look and feel
+
+Javascript disabled: When Javascript is disabled the application works as it
+should be doing. The `fallback input fields` are rendered.
+
+Look and feel: On Samsung Internet the borders of the `input[type="text]` are
+also not visible enough. Giving the input fields a border as shown in the Google
+Chrome Mobile test results fixed this.
+
 # Installation guide
 
 1. Clone repo
