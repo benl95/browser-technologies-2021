@@ -66,6 +66,7 @@ label {
 }
 input[type='text'] {
 	display: inline-block;
+	border: 1px solid var(--black);
 	margin: 0.3em 0 1.5em;
 	padding: 5px;
 	width: var(--input-width);
