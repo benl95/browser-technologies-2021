@@ -15,6 +15,40 @@ Users must be able to fill in the following on the survey:
 -  Data will be saved
 -  User can continue where they left if they decide to come back later
 
+## Layers
+
+<detail>
+   <summary>Functional</summary>
+   <br>
+
+-  HTML content works properly
+-  User can log in and track the surveys they have to do and which ones are
+   completed
+-  User can fill in and submit a form, data will be stored </detail>
+
+<detail>
+   <summary>Reliable</summary>
+   <br>
+
+-  Form validation works
+
+</detail>
+
+<detail>
+   <summary>Usable</summary>
+   <br>
+
+-  CSS adds extra styling to make it more readable for the user. </detail>
+
+<detail>
+   <summary>Pleasurable></summary>
+   <br>
+
+-  Filled in answers will be stored in Local Storage. When a user leaves a
+   survey and comes back later the input fields have the same value.
+-  Slider enhance for user to make it more easy for users to grade a course.
+   </detail>
+
 ## Browser testing
 
 ### Browsers
