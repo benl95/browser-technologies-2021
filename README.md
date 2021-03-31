@@ -17,34 +17,26 @@ Users must be able to fill in the following on the survey:
 
 ## Layers
 
-<detail>
-   <summary>Functional</summary>
-   <br>
-* HTML content works properly
-* User can log in and track the surveys they have to do and which ones are
+Functional
+
+-  HTML content works properly
+-  User can log in and track the surveys they have to do and which ones are
    completed
-* User can fill in and submit a form, data will be stored 
-</detail>
+-  User can fill in and submit a form, data will be stored
 
-<detail>
-<summary>Reliable</summary>
-<br>
-* Form validation works. 
-</detail>
+Reliable
 
-<detail>
-<summary>Usable</summary>
-<br>
-* CSS adds extra styling to make it more readable for the user. 
-</detail>
+-  Form validation works.
 
-<detail>
-<summary>Pleasurable></summary>
-<br>
-* Filled in answers will be stored in Local Storage. When a user leaves a
+Usable
+
+-  CSS adds extra styling to make it more readable for the user.
+
+Pleasurable
+
+-  Filled in answers will be stored in Local Storage. When a user leaves a
    survey and comes back later the input fields have the same value.
-* Slider enhance for user to make it more easy for users to grade a course.
-</detail>
+-  Slider enhance for user to make it more easy for users to grade a course.
 
 ## Browser testing
 
