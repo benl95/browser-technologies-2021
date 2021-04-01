@@ -15,7 +15,11 @@ Users must be able to fill in the following on the survey:
 -  Data will be saved
 -  User can continue where they left off if they decide to come back later
 
-### Enhancements
+## Live link
+
+[Live link](https://btform.herokuapp.com/)
+
+## Progressive Enhancements
 
 **Local Storage API**
 
@@ -29,10 +33,6 @@ where they left off in their last session.
 With Javascript sliders are created and will replace the radio buttons to grade
 a course. The value of a slider will be output under the slider to give feedback
 to the user what the value of the slider currently is.
-
-### Live link
-
-[Live link](https://btform.herokuapp.com/)
 
 ### Layers
 
@@ -191,22 +191,17 @@ Google Chrome Mobile test results fixed this.</li>
 </ul>
 </details>
 
+## Wireframes and sketches
+
 ### Wireframe
 
 <details>
-<summary>Wireflow</summary>
+<summary>Wireframe</summary>
 <img src="https://user-images.githubusercontent.com/43675725/113268839-20740e00-92d8-11eb-94ef-557c51916f59.png" width="300" height="555">
 <img src="https://user-images.githubusercontent.com/43675725/113269003-4f8a7f80-92d8-11eb-8bc2-0df431d3ce33.png" width="300" height="555">
 <img src="https://user-images.githubusercontent.com/43675725/113269059-5e713200-92d8-11eb-94b3-cff41b44e633.png" width="300" height="555">
 <img src="https://user-images.githubusercontent.com/43675725/113269125-6e891180-92d8-11eb-884f-da9f31710447.png" width="300" height="555">
 </details>
-
-### Installation guide
-
-1. Clone repo
-   `git clone https://github.com/benl95/browser-technologies-2021.git`
-2. Install packages `npm i`
-3. Start up server and run locally `node index` `
 
 ### Sketches
 
@@ -218,6 +213,13 @@ Google Chrome Mobile test results fixed this.</li>
 <img src="https://user-images.githubusercontent.com/43675725/113267858-16054480-92d7-11eb-8035-6149927d83df.jpeg">
 </details>
 
-# License
+## Installation guide
+
+1. Clone repo
+   `git clone https://github.com/benl95/browser-technologies-2021.git`
+2. Install packages `npm i`
+3. Start up server and run locally `node index` `
+
+## License
 
 MIT
