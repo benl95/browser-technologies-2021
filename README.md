@@ -233,11 +233,6 @@ npm install
 node app
 ```
 
-1. Clone repo
-   `git clone https://github.com/benl95/browser-technologies-2021.git`
-2. Install packages `npm i`
-3. Start up server and run locally `node index` `
-
 ## License
 
 MIT
