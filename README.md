@@ -39,7 +39,7 @@ to the user what the value of the slider currently is.
 <details>
 <summary>Functional</summary>
 <ul>
-<li>Users can log in fill in a survey and submit a survey</li>
+<li>Users can log in, fill in a survey and submit a survey</li>
 <li>Surveys will be displayed on the todo list if they haven't been completed yet,
    completed surveys will be displayed in the completed list </li>
 </ul>
@@ -194,12 +194,11 @@ Google Chrome Mobile test results fixed this.</li>
 ### Wireframe
 
 <details>
-<summary>
+<summary>Wireflow</summary>
 <img src="https://user-images.githubusercontent.com/43675725/113268839-20740e00-92d8-11eb-94ef-557c51916f59.png" width="300" height="555">
 <img src="https://user-images.githubusercontent.com/43675725/113269003-4f8a7f80-92d8-11eb-8bc2-0df431d3ce33.png" width="300" height="555">
 <img src="https://user-images.githubusercontent.com/43675725/113269059-5e713200-92d8-11eb-94b3-cff41b44e633.png" width="300" height="555">
 <img src="https://user-images.githubusercontent.com/43675725/113269125-6e891180-92d8-11eb-884f-da9f31710447.png" width="300" height="555">
-</summary>
 </details>
 
 ### Installation guide
