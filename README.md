@@ -215,6 +215,24 @@ Google Chrome Mobile test results fixed this.</li>
 
 ## Installation guide
 
+### Clone repo
+
+```
+git clone https://github.com/benl95/browser-technologies-2021.git
+```
+
+### Navigate to the repo and install the packages
+
+```
+npm install
+```
+
+### Run the project locally
+
+```
+node app
+```
+
 1. Clone repo
    `git clone https://github.com/benl95/browser-technologies-2021.git`
 2. Install packages `npm i`
