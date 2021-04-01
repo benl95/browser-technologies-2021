@@ -16,6 +16,7 @@ function createSlider(id) {
 	slider.name = id;
 	slider.value = 5;
 	sliderValue.innerHTML = slider.value;
+	slider.required = true;
 	label.textContent = capitalizeFirstLetter(id);
 	label.htmlFor = id;
 
